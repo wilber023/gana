@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useNavigate } from "react-router-dom";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   User,
@@ -26,6 +28,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [loginData, setLoginData] = useState({
     email: "",
@@ -165,20 +168,21 @@ export default function Login() {
                           </Button>
                         </div>
 
-                        <Button
-                          type="submit"
-                          className="w-full"
-                          disabled={isLoading}
-                        >
-                          {isLoading ? (
-                            "Iniciando sesión..."
-                          ) : (
-                            <>
-                              Iniciar Sesión
-                              <ArrowRight className="ml-2 h-4 w-4" />
-                            </>
-                          )}
-                        </Button>
+                  <Button
+  type="button" // Cambiado a type="button" para evitar submit de formulario
+  className="w-full"
+  onClick={() => navigate('/dashboard')} // Navegación directa
+  disabled={isLoading}
+>
+  {isLoading ? (
+    "Iniciando sesión..."
+  ) : (
+    <>
+      Iniciar Sesión
+      <ArrowRight className="ml-2 h-4 w-4" />
+    </>
+  )}
+</Button>
                       </form>
                     </TabsContent>
 

@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Activity,
   TrendingUp,
@@ -219,13 +220,16 @@ export default function Dashboard() {
               </div>
 
               <div className="p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-lg">
-                <h4 className="font-medium mb-2">Ver Trazabilidad</h4>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Consultar historial completo de animales
-                </p>
-                <Button size="sm" variant="outline" className="w-full">
-                  Ver Historial
-                </Button>
+             
+  <h4 className="font-medium mb-2">Ver Trazabilidad</h4>
+  <p className="text-sm text-muted-foreground mb-3">
+    Consultar historial completo de animales
+  </p>
+  <Link to="/traceability">
+    <Button size="sm" variant="outline" className="w-full">
+      Ver Historial
+    </Button>
+  </Link>
               </div>
 
               <div className="p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">

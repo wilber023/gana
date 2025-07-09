@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
 import {
   TrendingUp,
   Search,
@@ -171,13 +172,17 @@ export default function Marketplace() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" className="px-8">
-                <TrendingUp className="h-5 w-5 mr-2" />
-                Quiero Vender
-              </Button>
-              <Button variant="outline" size="lg" className="px-8">
-                Ver Cómo Funciona
-              </Button>
+           <Link to="/register">
+  <Button size="lg" className="px-8">
+    <TrendingUp className="h-5 w-5 mr-2" />
+    Quiero Vender
+  </Button>
+</Link>
+           <Link to="/about">
+  <Button variant="outline" size="lg" className="px-8">
+    Ver Cómo Funciona
+  </Button>
+</Link>
             </div>
 
             {/* Stats */}
