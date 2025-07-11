@@ -232,15 +232,17 @@ export default function Dashboard() {
   </Link>
               </div>
 
-              <div className="p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
-                <h4 className="font-medium mb-2">Generar Reporte</h4>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Crear reportes de cumplimiento
-                </p>
-                <Button size="sm" variant="outline" className="w-full">
-                  Crear Reporte
-                </Button>
-              </div>
+  <div className="p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
+  <h4 className="font-medium mb-2">Generar Reporte</h4>
+  <p className="text-sm text-muted-foreground mb-3">
+    Crear reportes de cumplimiento
+  </p>
+  <Link to="/reports">
+    <Button size="sm" variant="outline" className="w-full">
+      Crear Reporte
+    </Button>
+  </Link>
+</div>
             </CardContent>
           </Card>
         </div>
